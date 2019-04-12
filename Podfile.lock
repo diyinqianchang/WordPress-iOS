@@ -30,10 +30,7 @@ PODS:
   - CocoaLumberjack/Default (3.4.2)
   - CocoaLumberjack/Extensions (3.4.2):
     - CocoaLumberjack/Default
-  - Crashlytics (3.12.0):
-    - Fabric (~> 1.9.0)
   - DoubleConversion (1.1.5)
-  - Fabric (1.9.0)
   - Folly (2018.10.22.00):
     - boost-for-react-native
     - DoubleConversion
@@ -189,6 +186,9 @@ PODS:
   - RNTAztecView (1.2.0):
     - React
     - WordPress-Aztec-iOS
+  - Sentry (4.3.1):
+    - Sentry/Core (= 4.3.1)
+  - Sentry/Core (4.3.1)
   - SimulatorStatusMagic (2.4.1)
   - Starscream (3.0.6)
   - SVProgressHUD (2.2.5)
@@ -240,7 +240,6 @@ DEPENDENCIES:
   - Automattic-Tracks-iOS (= 0.3.4)
   - Charts (~> 3.2.2)
   - CocoaLumberjack (= 3.4.2)
-  - Crashlytics (= 3.12.0)
   - Folly (from `https://raw.githubusercontent.com/wordpress-mobile/gutenberg-mobile/v1.2.0/react-native-gutenberg-bridge/third-party-podspecs/Folly.podspec.json`)
   - FormatterKit/TimeIntervalFormatter (= 1.8.2)
   - Gifu (= 3.2.0)
@@ -262,6 +261,7 @@ DEPENDENCIES:
   - react-native-safe-area (from `https://raw.githubusercontent.com/wordpress-mobile/gutenberg-mobile/v1.2.0/react-native-gutenberg-bridge/third-party-podspecs/react-native-safe-area.podspec.json`)
   - RNSVG (from `https://github.com/wordpress-mobile/react-native-svg.git`, tag `9.3.3-gb`)
   - RNTAztecView (from `http://github.com/wordpress-mobile/gutenberg-mobile/`, tag `v1.2.0`)
+  - Sentry (= 4.3.1)
   - SimulatorStatusMagic
   - Starscream (= 3.0.6)
   - SVProgressHUD (= 2.2.5)
@@ -284,9 +284,7 @@ SPEC REPOS:
     - boost-for-react-native
     - Charts
     - CocoaLumberjack
-    - Crashlytics
     - DoubleConversion
-    - Fabric
     - FormatterKit
     - Gifu
     - GiphyCoreSDK
@@ -306,6 +304,7 @@ SPEC REPOS:
     - OCMock
     - OHHTTPStubs
     - Reachability
+    - Sentry
     - SimulatorStatusMagic
     - Starscream
     - SVProgressHUD
@@ -370,9 +369,7 @@ SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   Charts: f69cf0518b6d1d62608ca504248f1bbe0b6ae77e
   CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
-  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   DoubleConversion: e22e0762848812a87afd67ffda3998d9ef29170c
-  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   Folly: de497beb10f102453a1afa9edbf8cf8a251890de
   FormatterKit: 4b8f29acc9b872d5d12a63efb560661e8f2e1b98
   Gifu: 7bcb6427457d85e0b4dff5a84ec5947ac19a93ea
@@ -399,6 +396,7 @@ SPEC CHECKSUMS:
   react-native-safe-area: 7dc92953fce43bf36ab5ecae2fb4ffa2bda9a203
   RNSVG: 978db19eaef499d9ebffb74a091ca0abf209c8c1
   RNTAztecView: 440b63d52c693f9a97e3a0a6b478569580e46a9d
+  Sentry: 5267d493a398663538317e4dcc438c12c66202ed
   SimulatorStatusMagic: 28d4a9d1a500ac7cea0b2b5a43c1c6ddb40ba56c
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
@@ -415,6 +413,6 @@ SPEC CHECKSUMS:
   ZendeskSDK: cbd49d65efb2f2cdbdcaac84e618896ae87b861e
   ZIPFoundation: 89df685c971926b0323087952320bdfee9f0b6ef
 
-PODFILE CHECKSUM: 36cf7950699299ed7f9a616e828f39058dd614d9
+PODFILE CHECKSUM: 9e4c4ea9e9c991dafbb49aea2ae33746011ff9d8
 
 COCOAPODS: 1.6.1

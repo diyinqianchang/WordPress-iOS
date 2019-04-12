@@ -34,12 +34,13 @@ extension WordPressAppDelegate {
     }
 
     @objc func configureCrashlytics() {
+        #warning("This is for testing only")
+        WPCrashLogging.start()
+
         #if DEBUG
             return
         #else
-            if let apiKey = ApiCredentials.crashlyticsApiKey() {
-                crashlytics = WPCrashlytics(apiKey: apiKey)
-            }
+            WPCrashLogging.start()
         #endif
     }
 
