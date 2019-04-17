@@ -64,6 +64,12 @@
 
 #pragma mark - Reading from the log
 
+- (NSString *)filePathForMostRecentLogFile
+{
+    NSArray<DDLogFileInfo *> *sortedLogFileInfos = [[self.fileLogger logFileManager] sortedLogFileInfos];
+    return sortedLogFileInfos.firstObject.filePath;
+}
+
 // get the log content with a maximum byte size
 - (NSString *)getLogFilesContentWithMaxSize:(NSInteger)maxSize
 {

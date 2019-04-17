@@ -53,6 +53,7 @@ def shared_with_all_pods
     pod 'FormatterKit/TimeIntervalFormatter', '1.8.2'
     pod 'NSObject-SafeExpectations', '0.0.3'
     pod 'Sentry', '4.3.1'
+    pod 'Sodium', '~> 0.8.0'
 end
 
 def shared_with_networking_pods

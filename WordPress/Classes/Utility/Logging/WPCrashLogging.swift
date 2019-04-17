@@ -27,13 +27,35 @@ class WPCrashLogging {
             Client.shared?.beforeSerializeEvent = sharedInstance.beforeSerializeEvent
             Client.shared?.shouldSendEvent = sharedInstance.shouldSendEvent
 
+            sharedInstance.applyUserTrackingPreferences()
+
         } catch let error {
             print("\(error)")
         }
     }
 
     func beforeSerializeEvent(_ event: Event) {
-        event.extra = ["b": "c"]
+
+        guard let logFilePath = WPLogger().filePathForMostRecentLogFile()
+            else {
+                DDLogError("No log file was found for inclusion in crash report.")
+                return
+        }
+
+        do {
+            let source = URL(fileURLWithPath: logFilePath)
+            let destination = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
+                .appendingPathComponent(UUID().uuidString)
+
+            try LogEncryptor().encryptFile(atPath: source, toPath: destination)
+
+            let logData = try String(contentsOf: destination)
+            event.extra = ["debug-log": logData]
+        }
+        catch let err {
+            DDLogError("Unable to prepare log file for inclusion in crash report.")
+            DDLogError(err.localizedDescription)
+        }
     }
 
     func shouldSendEvent(_ event: Event?) -> Bool {
@@ -43,7 +65,7 @@ class WPCrashLogging {
     var userHasOptedOut: Bool = false
 
     static var userHasOptedOut: Bool {
-        get{
+        get {
             let value = UserDefaults.standard.bool(forKey: UserOptedOutKey)
             sharedInstance.userHasOptedOut = value
 
@@ -115,6 +137,7 @@ extension WPCrashLogging {
 
     func disableUserTracking() {
         Client.shared?.clearContext()
+        Client.shared?.beforeSerializeEvent = nil
     }
 
     var releaseName: String {

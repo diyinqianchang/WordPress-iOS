@@ -190,6 +190,7 @@ PODS:
     - Sentry/Core (= 4.3.1)
   - Sentry/Core (4.3.1)
   - SimulatorStatusMagic (2.4.1)
+  - Sodium (0.8.0)
   - Starscream (3.0.6)
   - SVProgressHUD (2.2.5)
   - UIDeviceIdentifier (1.1.4)
@@ -263,6 +264,7 @@ DEPENDENCIES:
   - RNTAztecView (from `http://github.com/wordpress-mobile/gutenberg-mobile/`, tag `v1.2.0`)
   - Sentry (= 4.3.1)
   - SimulatorStatusMagic
+  - Sodium (~> 0.8.0)
   - Starscream (= 3.0.6)
   - SVProgressHUD (= 2.2.5)
   - WordPress-Editor-iOS (~> 1.6.0-beta)
@@ -306,6 +308,7 @@ SPEC REPOS:
     - Reachability
     - Sentry
     - SimulatorStatusMagic
+    - Sodium
     - Starscream
     - SVProgressHUD
     - UIDeviceIdentifier
@@ -398,6 +401,7 @@ SPEC CHECKSUMS:
   RNTAztecView: 440b63d52c693f9a97e3a0a6b478569580e46a9d
   Sentry: 5267d493a398663538317e4dcc438c12c66202ed
   SimulatorStatusMagic: 28d4a9d1a500ac7cea0b2b5a43c1c6ddb40ba56c
+  Sodium: 63c0ca312a932e6da481689537d4b35568841bdc
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   UIDeviceIdentifier: 8f8a24b257a4d978c8d40ad1e7355b944ffbfa8c
@@ -413,6 +417,6 @@ SPEC CHECKSUMS:
   ZendeskSDK: cbd49d65efb2f2cdbdcaac84e618896ae87b861e
   ZIPFoundation: 89df685c971926b0323087952320bdfee9f0b6ef
 
-PODFILE CHECKSUM: 9e4c4ea9e9c991dafbb49aea2ae33746011ff9d8
+PODFILE CHECKSUM: b2940facf84ae23d6fa5a659d3ed3dbf5cc88353
 
 COCOAPODS: 1.6.1

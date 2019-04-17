@@ -21,6 +21,12 @@
  */
 - (NSString *)getLogFilesContentWithMaxSize:(NSInteger)maxSize;
 
+/**
+ *  @brief      Retrieves the path to the most recent Log File
+ *  @returns    An absolute file path
+ */
+- (NSString *)filePathForMostRecentLogFile;
+
 + (void)configureLoggerLevelWithExtraDebug;
 
 @end
